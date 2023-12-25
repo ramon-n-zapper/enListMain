@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>英単語リスト</title>
+</head>
+
+<body>
+
+	<h2>English Vocabulary List</h2>
+
+	<a th:href="@{/add}">+新規単語登録</a>
+
+	<button class="hideButtonEn" id="toggleEnglishBtn" onclick="toggleColumn('english')">
+		英語を非表示
+	</button>
+	<button class="hideButtonJa" id="toggleJapaneseBtn" onclick="toggleColumn('japanese')">
+		日本語訳を非表示
+	</button>
+
+	<table>
+		<thead>
+			<tr>
+				<th>No</th><!--最終的にidは表示から削除する。確認用。-->
+				<th>English</th>
+				<th>日本語訳</th>
+			</tr>
+		</thead>
+		<!-- Loop through the list of students and display information -->
+		<tbody>
+			<tr th:each="word : ${words}">
+				<td th:text="${word.id}"></td><!-- 最終的にidは表示から削除する。確認用。-->
+				<td class="english" th:text="${word.english}"></td>
+				<td class="japanese" th:text="${word.japanese}"></td>
+				<td>
+					<a th:href="@{/edit(id=${word.id})}">編集</a>
+					<button th:attr="onclick='confirmDelete(\'' + ${word.id} + '\')'">削除</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script th:inline="javascript">
+		let englishVisible = true; // 英語の列が表示されているかどうかの状態を追跡
+		let japaneseVisible = true; // 日本語訳の列が表示されているかどうかの状態を追跡
+
+		function toggleColumn(language) {
+			console.log(language);  // デバッグ用
+			const table = document.querySelector('table');//tableタグ内の要素をtableに代入
+			const rows = table.querySelectorAll('tbody tr');//tableタグ内のtbody内のtrタグの要素をrowsに代入
+
+			// クリックされたボタンに対応するクラス名を生成、languageの情報がenglishか否か判定
+			//languageの値がenglishならenglishが代入、englishでない場合はjapaneseを代入
+			const className = language === 'english' ? 'english' : 'japanese';
+
+			// 表の各行をループして、指定されたクラスを持つセルを非表示にする
+			for (let i = 0; i < rows.length; i++) {
+				const row = rows[i];
+				const cell = row.querySelector('.' + className);
+				if (cell) {
+					// 英語の列または日本語訳の列の表示/非表示をトグル
+					if (language === 'english' && englishVisible) {
+						cell.style.visibility = 'hidden';
+					} else if (language === 'japanese' && japaneseVisible) {
+						cell.style.visibility = 'hidden';
+					} else {
+						cell.style.visibility = 'visible';
+					}
+				}
+			}
+			// 英語の列と日本語訳の列の表示状態を更新
+			if (language === 'english') {
+				englishVisible = !englishVisible;
+				const englishButton = document.getElementById('toggleEnglishBtn');
+				englishButton.textContent = englishVisible ? '英語を非表示' : '英語を表示';
+			} else {
+				japaneseVisible = !japaneseVisible;
+				const japaneseButton = document.getElementById('toggleJapaneseBtn');
+				japaneseButton.textContent = japaneseVisible ? '日本語訳を非表示' : '日本語訳を表示';
+			}
+		}
+
+		function confirmDelete(wordId) {
+			const result = confirm('本当に削除しますか？');
+			if (result) {
+				// OKが選択された場合
+				window.location.href = '/delete?id=' + wordId;
+			} else {
+				// キャンセルが選択された場合
+				window.location.href = '/';
+			}
+		}
+	</script>
+
+</body>
+
+</html>
