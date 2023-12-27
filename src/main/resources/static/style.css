@@ -65,3 +65,38 @@ header .headerLogo {
 header .headerLogo:hover {
   color: #58d2b2;
 }
+
+/* container ================================ */
+.container {
+  width: 90%;
+  min-width: 360px;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 56px;
+}
+
+.container .containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.container .containerHeader .addButton {
+  background-color: #b7cadc;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #6c7686;
+  width: 120px;
+  height: 30px;
+  line-height: 29px;
+  text-align: center;
+  border: 2px solid #b7cadc;
+}
+
+.container .containerHeader .addButton:hover {
+  background-color: #fff;
+  color: #b7cadc;
+  transition: all 0.3s ease;
+}
