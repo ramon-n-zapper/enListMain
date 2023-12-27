@@ -7,40 +7,46 @@
 </head>
 
 <body>
+	<header>
+		<a href="/" class="headerLogo">English Vocabulary List</a>
+	</header>
+	<div class="container">
+		<div class="containerHeader">
+			<h1>英単語リスト</h1>
+			<a th:href="@{/add}">+新規単語登録</a>
+		</div>
+		<div class="indexTableWrapper">
+			<div class="toggleHideButton">
+				<button class="hideButtonEn" id="toggleEnglishBtn" onclick="toggleColumn('english')">
+					英語を非表示
+				</button>
+				<button class="hideButtonJa" id="toggleJapaneseBtn" onclick="toggleColumn('japanese')">
+					日本語訳を非表示
+				</button>
+			</div>
 
-	<h2>English Vocabulary List</h2>
-
-	<a th:href="@{/add}">+新規単語登録</a>
-
-	<button class="hideButtonEn" id="toggleEnglishBtn" onclick="toggleColumn('english')">
-		英語を非表示
-	</button>
-	<button class="hideButtonJa" id="toggleJapaneseBtn" onclick="toggleColumn('japanese')">
-		日本語訳を非表示
-	</button>
-
-	<table>
-		<thead>
-			<tr>
-				<th>No</th><!--最終的にidは表示から削除する。確認用。-->
-				<th>English</th>
-				<th>日本語訳</th>
-			</tr>
-		</thead>
-		<!-- Loop through the list of students and display information -->
-		<tbody>
-			<tr th:each="word : ${words}">
-				<td th:text="${word.id}"></td><!-- 最終的にidは表示から削除する。確認用。-->
-				<td class="english" th:text="${word.english}"></td>
-				<td class="japanese" th:text="${word.japanese}"></td>
-				<td>
-					<a th:href="@{/edit(id=${word.id})}">編集</a>
-					<button th:attr="onclick='confirmDelete(\'' + ${word.id} + '\')'">削除</button>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
+			<table>
+				<thead>
+					<tr class="tableHead">
+						<th>English</th>
+						<th>日本語訳</th>
+					</tr>
+				</thead>
+				<!-- Loop through the list of students and display information -->
+				<tbody>
+					<tr th:each="word : ${words}">
+						<td class="english" th:text="${word.english}"></td>
+						<td class="japanese" th:text="${word.japanese}"></td>
+						<td>
+							<a class="editButton" th:href="@{/edit(id=${word.id})}">編集</a>
+							<button class="deleteButton"
+								th:attr="onclick='confirmDelete(\'' + ${word.id} + '\')'">削除</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 	<script th:inline="javascript">
 		let englishVisible = true; // 英語の列が表示されているかどうかの状態を追跡
 		let japaneseVisible = true; // 日本語訳の列が表示されているかどうかの状態を追跡
