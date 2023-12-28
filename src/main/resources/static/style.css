@@ -147,3 +147,68 @@ header .headerLogo:hover {
   color: #fc9ca5;
   transition: all 0.3s ease;
 }
+
+/* table ================================ */
+table {
+  border-spacing: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.tableHead th {
+  background-color: #b7cadc;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.tableHead .enHead {
+  width: 45%;
+  max-width: 630px;
+  min-width: 162px;
+  border-top-left-radius: 3px;
+}
+
+.tableHead .jaHead {
+  width: 45%;
+  max-width: 630px;
+  min-width: 162px;
+}
+
+.tableHead .blank {
+  border-top-right-radius: 3px;
+  max-width: 140px;
+  min-width: 36px;
+}
+
+tr {
+  font-size: 18px;
+  color: #6c7686;
+}
+
+tr .menuButton {
+  text-align: center;
+}
+
+tr .menuButton .editButton, tr .menuButton .deleteButton {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-weight: bold;
+  color: #6c7686;
+  cursor: pointer;
+  display: inline;
+  white-space: nowrap;
+}
+
+tr .menuButton .editButton:hover {
+  color: #80bcff;
+  transition: all 0.3s ease;
+}
+
+tr .menuButton .deleteButton:hover {
+  color: #fc9ca5;
+  transition: all 0.3s ease;
+}
