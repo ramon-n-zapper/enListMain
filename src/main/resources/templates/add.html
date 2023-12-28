@@ -1,17 +1,30 @@
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>英単語追加</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>英単語追加</title>
 </head>
+
 <body>
-
-    <h2>Add English Vocabulary</h2>
-
-    <form action="/addNewWord" method="post">
-        <input type="text" name="english" placeholder="English">
-        <input type="text" name="japanese" placeholder="日本語訳">
-        <input type="submit" value="追加">
-    </form>
-
+	<header>
+		<a href="/" class="headerLogo">ENGLISH VOCABULARY LIST</a>
+	</header>
+	<div class="container">
+		<div class="containerHeader">
+			<h1>英単語追加</h1>
+		</div>
+		<div class="addFormWrapper">
+			<p class="formLabel">追加したい英単語を入力してください</p>
+			<form action="/addNewWord" method="post">
+				<input type="text" name="english" placeholder="English">
+				<input type="text" name="japanese" placeholder="日本語訳">
+				<input type="submit" value="追加">
+			</form>
+			<a href="index.html" class="cancelButton">戻る</a>
+		</div>
+	</div>
 </body>
+
 </html>
