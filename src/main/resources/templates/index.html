@@ -40,7 +40,7 @@
 					<tr th:each="word : ${words}">
 						<td class="english" th:text="${word.english}"></td>
 						<td class="japanese" th:text="${word.japanese}"></td>
-						<td>
+						<td class="menuButton">
 							<a class="editButton" th:href="@{/edit(id=${word.id})}">編集</a>
 							<button class="deleteButton"
 								th:attr="onclick='confirmDelete(\'' + ${word.id} + '\')'">削除</button>
