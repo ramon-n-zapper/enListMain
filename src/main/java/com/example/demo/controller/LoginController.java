@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.demo.constant.ErrorMessageConst;
+import com.example.demo.constant.MessageConst;
 import com.example.demo.form.LoginForm;
 import com.example.demo.service.LoginService;
 import com.example.demo.util.AppUtil;
@@ -61,7 +61,7 @@ public class LoginController {
 		if(isCorrectUserAuth) {
 			return "redirect:/";
 		} else {
-			String errorMsg = AppUtil.getMessage(messagesource, ErrorMessageConst.LOGIN_WRONG_INPUT);
+			String errorMsg = AppUtil.getMessage(messagesource, MessageConst.SIGNUP_EXISTED_LOGIN_ID);
 			model.addAttribute("errorMsg", errorMsg);
 			return "login";
 		}
