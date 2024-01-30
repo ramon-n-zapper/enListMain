@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html xmlns="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>ログイン画面</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>ログイン画面</title>
 </head>
+
 <body>
- <h2>ログイン画面<h2>
-	 <span th:text="${errorMsg}"></span>
-	 <form th:action="@{/login}" method="post" th:object="${loginForm}">
-		 <div>
-			 <label>ログインID</label>
-			 <input type="text" th:field="*{loginId}">
-		 </div>
-		 <div>
-			 <label>ログインパスワード</label>
-			 <input type="text" th:field="*{password}">
-		 </div>
-		 <div>
-			 <input type="submit" value="ログイン">
-		 </div>
-	 </form>
+	<header>
+		<a class="headerLogo">ENGLISH VOCABULARY LIST</a>
+	</header>
+	<div class="container">
+		<div class="containerHeader">
+			<h1>ログイン画面</h1>
+		</div>
+		<div class="loginFormWrapper">
+			<span th:text="${message}"></span>
+			<p class="formLabel">ログインIDとパスワードを入力してください</p>
+			<form th:action="@{/login}" method="post" th:object="${loginForm}">
+				<div class="formGroupLog">
+					<label th:for="*{loginId}">ログインID</label>
+					<input type="text" th:field="*{loginId}">
+					<label>ログインパスワード</label>
+					<input type="text" th:field="*{password}">
+					<input type="submit" value="ログイン">
+				</div>
+			</form>
+			<a class="signupLink" th:href="@{/signup}">▶新規ユーザー登録はこちら</a>
+		</div>
+	</div>
 </body>
+
 </html>

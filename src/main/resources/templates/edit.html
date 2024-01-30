@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>英単語編集</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>英単語編集</title>
 </head>
+
 <body>
-
-    <h2>Edit English Vocabulary</h2>
-
-    <form action="/updateNewWord" method="post">
-        <input type="hidden" name="id" th:value="${word.id}">
-
-        <p>
-            英単語：<input type="text" name="english" th:value="${word.english}">
-        </p>
-
-        <p>
-            日本語訳：<input type="text" name="japanese" th:value="${word.japanese}">
-        </p>
-
-        <input type="submit" value="更新">
-    </form>
-
+	<header>
+		<a href="/" class="headerLogo">ENGLISH VOCABULARY LIST</a>
+	</header>
+	<div class="container">
+		<div class="containerHeader">
+			<h1>英単語編集</h1>
+		</div>
+		<div class="editFormWrapper">
+			<form action="/updateNewWord" method="post">
+				<input type="hidden" name="id" th:value="${word.id}">
+				<p class="editLabelEn"><label for="inputEn">英単語：</label><input type="text" id="inputEn" name="english" th:value="${word.english}"></p>
+				<p class="editLabelJa"><label for="inputJa">日本語訳：</label><input type="text" id="inputJa" name="japanese" th:value="${word.japanese}"></p>
+				<input type="submit" value="更新">
+			</form>
+			<a href="/" class="cancelButton">戻る</a>
+		</div>
+	</div>
 </body>
+
 </html>

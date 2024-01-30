@@ -10,13 +10,14 @@
 
 <body>
 	<header>
-		<a href="/" class="headerLogo">English Vocabulary List</a>
+		<a href="/" class="headerLogo">ENGLISH VOCABULARY LIST</a>
 	</header>
 	<div class="container">
 		<div class="containerHeader">
-			<h2>英単語リスト</h2>
+			<h1>英単語リスト</h1>
 			<a th:href="@{/add}" class="addButton">+新規単語登録</a>
 		</div>
+		
 		<div class="indexTableWrapper">
 			<div class="hideButton">
 				<button class="hideButtonEn" id="toggleEnglishBtn" onclick="toggleColumn('english')">
@@ -26,7 +27,6 @@
 					日本語訳を非表示
 				</button>
 			</div>
-
 			<table>
 				<thead>
 					<tr class="tableHead">
