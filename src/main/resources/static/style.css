@@ -1,313 +1,326 @@
 @charset "UTF-8";
+
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  font-size: 100%;
-  font-family: "Hiragino Sans", sans-serif;
-  line-height: 1.7;
-  letter-spacing: 1px;
+	font-size: 100%;
+	font-family: "Hiragino Sans", sans-serif;
+	line-height: 1.7;
+	letter-spacing: 1px;
 }
 
 body {
-  margin: 0;
-  background-color: #f6faff;
-  color: #6c7686;
+	margin: 0;
+	background-color: #f6faff;
+	color: #6c7686;
 }
 
-ul, li {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+ul,
+li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
 
 a {
-  display: block;
-  text-decoration: none;
-  color: #2d3133;
-  font-size: 14px;
+	display: block;
+	text-decoration: none;
+	color: #2d3133;
+	font-size: 14px;
 }
 
 a:hover {
-  transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
 }
 
 h1 {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 input {
-  font-family: inherit;
-  font-size: 100%;
+	font-family: inherit;
+	font-size: 100%;
 }
 
 /* header ================================ */
 header {
-  height: 56px;
-  background-color: #fff;
-  border-bottom: 1px solid #f0f4f9;
-  overflow: hidden;
+	overflow: hidden;
+	height: 56px;
+	border-bottom: 1px solid #f0f4f9;
+	background-color: #fff;
 }
 
 header .headerLogo {
-  margin-left: 12px;
-  font-weight: 600;
-  line-height: 56px;
-  color: #6c7686;
-  display: inline;
+	display: inline;
+	margin-left: 12px;
+	color: #6c7686;
+	font-weight: 600;
+	line-height: 56px;
 }
 
 @media (max-width: 700px) {
 	header .headerLogo {
-	  font-size: 23px;
-	}	
+		font-size: 23px;
+	}
 }
 
 @media (min-width: 700px) {
 	header .headerLogo {
-	  font-size: 25px;
+		font-size: 25px;
 	}
 }
 
 
 header .headerLogo:hover {
-  color: #58d2b2;
+	color: #58d2b2;
 }
 
 /* container ================================ */
 .container {
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 56px;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 56px;
 }
 
 .container .containerHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 @media (max-width: 700px) {
 	.container .containerHeader {
-	  font-size: 14px;
-	  margin-bottom: 7px;
-	}	
+		margin-bottom: 7px;
+		font-size: 14px;
+	}
 }
 
 @media (min-width: 700px) {
 	.container .containerHeader {
-	  font-size: 22px;
-	}	
+		font-size: 22px;
+	}
 }
 
 .container .containerHeader .addButton {
-  background-color: #b7cadc;
-  border-radius: 3px;
-  font-weight: bold;
-  color: #6c7686;
-  text-align: center;
-  border: 2px solid #b7cadc;
+	border: 2px solid #b7cadc;
+	border-radius: 3px;
+	background-color: #b7cadc;
+	color: #6c7686;
+	text-align: center;
+	font-weight: bold;
 }
 
 .container .containerHeader .addButton:hover {
-  background-color: #fff;
-  color: #b7cadc;
-  transition: all 0.3s ease;
+	background-color: #fff;
+	color: #b7cadc;
+	transition: all 0.3s ease;
 }
 
 @media (max-width: 700px) {
 	.container .containerHeader .addButton {
-	  font-size: 14px;
-	  width: 130px;
-	  height: 35px;
-	  line-height: 35px;
-	}	
+		width: 130px;
+		height: 35px;
+		font-size: 14px;
+		line-height: 35px;
+	}
 }
 
 @media (min-width: 700px) {
 	.container .containerHeader .addButton {
-	  font-size: 22px;
-	  width: 200px;
-	  height: 45px;
-	  line-height: 45px;
-	}	
+		width: 200px;
+		height: 45px;
+		font-size: 22px;
+		line-height: 45px;
+	}
 }
 
 /* index ================================ */
 .hideButton {
-  text-align: right;
-  margin-bottom: 14px;
+	margin-bottom: 14px;
+	text-align: right;
 }
 
 .hideButton button {
-  font-size: 14px;
-  cursor: pointer;
-  border: none;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
 }
 
 .hideButton .hideButtonEn {
-  background-color: #80bcff;
-  border-radius: 30px;
-  text-align: center;
-  color: #fff;
-  border: 2px solid #80bcff;
+	border: 2px solid #80bcff;
+	border-radius: 30px;
+	background-color: #80bcff;
+	color: #fff;
+	text-align: center;
 }
 
 .hideButton .hideButtonEn:hover {
-  background-color: #fff;
-  color: #80bcff;
-  transition: all 0.3s ease;
+	background-color: #fff;
+	color: #80bcff;
+	transition: all 0.3s ease;
 }
 
 @media (max-width: 700px) {
 	.hideButton .hideButtonEn {
-	  font-size: 14px;
-	  width: 120px;
-	  height: 40px;
-	  line-height: 30px;
-  }
+		width: 120px;
+		height: 40px;
+		font-size: 14px;
+		line-height: 30px;
+	}
 }
 
 @media (min-width: 700px) {
 	.hideButton .hideButtonEn {
-	  font-size: 22px;
-	  width: 180px;
-	  height: 50px;
-	  line-height: 45px;
-	  font-weight: bold;
-  }
+		width: 180px;
+		height: 50px;
+		font-weight: bold;
+		font-size: 22px;
+		line-height: 45px;
+	}
 }
 
 .hideButton .hideButtonJa {
-  background-color: #fc9ca5;
-  border-radius: 30px;
-  text-align: center;
-  color: #fff;
-  border: 2px solid #fc9ca5;
+	border: 2px solid #fc9ca5;
+	border-radius: 30px;
+	background-color: #fc9ca5;
+	color: #fff;
+	text-align: center;
 }
 
 .hideButton .hideButtonJa:hover {
-  background-color: #fff;
-  color: #fc9ca5;
-  transition: all 0.3s ease;
+	background-color: #fff;
+	color: #fc9ca5;
+	transition: all 0.3s ease;
 }
 
 @media (max-width: 700px) {
 	.hideButton .hideButtonJa {
-	  font-size: 14px;
-	  width: 150px;
-	  height: 40px;
-	  line-height: 30px;
-  }
+		width: 150px;
+		height: 40px;
+		font-size: 14px;
+		line-height: 30px;
+	}
 }
 
 @media (min-width: 700px) {
 	.hideButton .hideButtonJa {
-	  font-size: 22px;
-	  width: 230px;
-	  height: 50px;
-	  line-height: 45px;
-	  font-weight: bold;
-  }
+		width: 230px;
+		height: 50px;
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 45px;
+	}
 }
 
 /* table ================================ */
 table {
-  border-spacing: 0;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 3px;
+	width: 100%;
+	border-spacing: 0;
+	border-radius: 3px;
+	background-color: #fff;
 }
 
 .tableHead th {
-  background-color: #b7cadc;
-  height: 40px;
-  text-align: center;
+	height: 40px;
+	background-color: #b7cadc;
+	text-align: center;
 }
 
 @media (max-width: 600px) {
 	.tableHead th {
-	  font-size: 18px;
-	}	
+		font-size: 18px;
+	}
 }
 
 @media (min-width: 600px) {
 	.tableHead th {
-	  font-size: 22px; 
+		font-size: 22px;
 	}
 }
 
 .tableHead .enHead {
-  width: 40%;
-  border-top-left-radius: 3px;
+	width: 40%;
+	border-top-left-radius: 3px;
 }
 
 .tableHead .jaHead {
-  width: 40%;
+	width: 40%;
 }
 
 .tableHead .blank {
-  border-top-right-radius: 3px;
-  width: 10%
+	width: 10%;
+	border-top-right-radius: 3px;
 }
 
 tr {
-	color: #6c7686; 
+	color: #6c7686;
 }
 
 @media (max-width: 600px) {
-		tr {
-	  font-size: 18px; 
+	tr {
+		font-size: 18px;
 	}
 }
 
 @media (min-width: 600px) {
-		tr {
-	  font-size: 22px; 
+	tr {
+		font-size: 22px;
 	}
 }
 
 
 tr .menuButton {
-  text-align: center;
+	text-align: center;
 }
 
-tr .menuButton .editButton, tr .menuButton .deleteButton {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  font-weight: bold;
-  color: #6c7686;
-  cursor: pointer;
-  display: inline;
-  white-space: nowrap;
+tr .menuButton .editButton,
+tr .menuButton .deleteButton {
+	display: inline;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: #6c7686;
+	font-weight: bold;
+	white-space: nowrap;
+	cursor: pointer;
 }
 
 @media (max-width: 600px) {
-	tr .menuButton .editButton, tr .menuButton .deleteButton {
-	  font-size: 16px;
-	}	
+
+	tr .menuButton .editButton,
+	tr .menuButton .deleteButton {
+		font-size: 16px;
+	}
 }
 
 @media (min-width: 600px) {
-	tr .menuButton .editButton, tr .menuButton .deleteButton{
-	  font-size: 20px;
+
+	tr .menuButton .editButton,
+	tr .menuButton .deleteButton {
+		font-size: 20px;
 	}
 }
 
 tr .menuButton .editButton:hover {
-  color: #80bcff;
-  transition: all 0.3s ease;
+	color: #80bcff;
+	transition: all 0.3s ease;
 }
 
 tr .menuButton .deleteButton:hover {
-  color: #fc9ca5;
-  transition: all 0.3s ease;
+	color: #fc9ca5;
+	transition: all 0.3s ease;
 }
 
 td {
@@ -316,502 +329,533 @@ td {
 
 /* login ================================ */
 .loginFormWrapper {
-  background-color: #fff;
-  border: 1px solid #f0f4f9;
-  border-radius: 2px;
-  padding: 20px;
+	padding: 20px;
+	border: 1px solid #f0f4f9;
+	border-radius: 2px;
+	background-color: #fff;
 }
 
 .loginFormWrapper .formLabel {
-  color: #8491a5;
+	color: #8491a5;
 }
 
 @media (max-width: 700px) {
 	.loginFormWrapper .formLabel {
-	  font-size: 18px;
-	}	
+		font-size: 18px;
+	}
 }
 
 @media (min-width: 700px) {
 	.loginFormWrapper .formLabel {
-	  font-size: 24px;
+		font-size: 24px;
 	}
 }
 
 
-@media (min-width: 700px){
+@media (min-width: 700px) {
 	.loginFormWrapper .formGroupLog {
-	font-size: 18px;
+		font-size: 18px;
 	}
 }
 
-@media (min-width: 700px){
+@media (min-width: 700px) {
 	.loginFormWrapper .formGroupLog {
-	font-size: 22px;
+		font-size: 22px;
 	}
 }
 
 .loginFormWrapper .inputForm {
-  margin: 0;
+	margin: 0;
 }
 
 .loginFormWrapper input[type=text] {
-  width: 100%;
-  padding: 12px 16px;
-  background-color: #fcfcfd;
-  border: 1px solid #bac6d3;
-  border-radius: 2px;
-  color: #2b546a;
+	width: 100%;
+	padding: 12px 16px;
+	border: 1px solid #bac6d3;
+	border-radius: 2px;
+	background-color: #fcfcfd;
+	color: #2b546a;
 }
 
 @media (max-width: 700px) {
 	.loginFormWrapper input[type=text] {
-	  font-size: 18px;
-	  height: 40px;
-	}	
+		height: 40px;
+		font-size: 18px;
+	}
 }
 
 @media (min-width: 700px) {
 	.loginFormWrapper input[type=text] {
-	  font-size: 22px;
-	  height: 60px;
+		height: 60px;
+		font-size: 22px;
 	}
 }
 
 .loginFormWrapper input[type=submit] {
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  margin-left: auto;
-  border-radius: 30px;
-  background-color: #80bcff;
-  color: #ffffff;
-  cursor: pointer;
-  outline: none;
-  border: 2px solid #80bcff;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	border: 2px solid #80bcff;
+	border-radius: 30px;
+	outline: none;
+	background-color: #80bcff;
+	color: #ffffff;
+	cursor: pointer;
 }
 
 .loginFormWrapper input[type=submit]:hover {
-  background-color: #ffffff;
-  color: #80bcff;
-  transition: all 0.3s ease;
+	background-color: #ffffff;
+	color: #80bcff;
+	transition: all 0.3s ease;
 }
 
 @media (max-width: 700px) {
 	.loginFormWrapper input[type=submit] {
-	  width: 100px;
-	  height: 40px;
-	  line-height: 38px;
-	  font-size: 18px;
-	}	
+		width: 100px;
+		height: 40px;
+		font-size: 18px;
+		line-height: 38px;
+	}
 }
 
 @media (min-width: 700px) {
 	.loginFormWrapper input[type=submit] {
-	  width: 120px;
-	  height: 50px;
-	  line-height: 48px;
-	  font-weight: bold;
-	  font-size: 22px;
+		width: 120px;
+		height: 50px;
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 48px;
 	}
 }
 
 .loginFormWrapper .signupLink {
+	color: #191970;
 	font-size: 18px;
 	text-align: right;
 	text-decoration: underline;
-	color: #191970;
 }
 
 .loginFormWrapper .signupLink:hover {
 	color: #80bcff;
-  	transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 /* signup ================================ */
 .signupFormWrapper {
-  background-color: #fff;
-  border: 1px solid #f0f4f9;
-  border-radius: 2px;
-  padding: 20px;
+	padding: 20px;
+	border: 1px solid #f0f4f9;
+	border-radius: 2px;
+	background-color: #fff;
 }
 
 .signupFormWrapper .formLabel {
-  color: #8491a5;
+	color: #8491a5;
 }
 
 @media (max-width: 700px) {
 	.signupFormWrapper .formLabel {
-	  font-size: 16px;
-	}	
+		font-size: 16px;
+	}
 }
 
 @media (min-width: 700px) {
 	.signupFormWrapper .formLabel {
-	  font-size: 24px;
+		font-size: 24px;
 	}
 }
 
 .signupFormWrapper .inputForm {
-  margin: 0;
+	margin: 0;
 }
 
 .signupFormWrapper input[type=text] {
-  width: 100%;
-  margin-top: 8px;
-  padding: 12px 16px;
-  background-color: #fcfcfd;
-  border: 1px solid #bac6d3;
-  border-radius: 2px;
-  color: #2b546a;
+	width: 100%;
+	margin-top: 8px;
+	padding: 12px 16px;
+	background-color: #fcfcfd;
+	border: 1px solid #bac6d3;
+	border-radius: 2px;
+	color: #2b546a;
 }
 
 .signupFormWrapper input[type=text]::placeholder {
-  opacity: 50%;
+	opacity: 50%;
 }
 
 @media (max-width: 700px) {
 	.signupFormWrapper input[type=text] {
-	  font-size: 18px;
-	  height: 40px;
-	}	
+		height: 40px;
+		font-size: 18px;
+	}
 }
 
 @media (min-width: 700px) {
 	.signupFormWrapper input[type=text] {
-	  font-size: 22px;
-	  height: 60px;
+		height: 60px;
+		font-size: 22px;
 	}
 }
 
 .signupFormWrapper input[type=submit] {
-  display: block;
-  margin-top: 10px;
-  margin-left: auto;
-  border-radius: 30px;
-  background-color: #80bcff;
-  color: #ffffff;
-  cursor: pointer;
-  outline: none;
-  border: 2px solid #80bcff;
+	display: block;
+	margin-top: 10px;
+	margin-left: auto;
+	border: 2px solid #80bcff;
+	border-radius: 30px;
+	background-color: #80bcff;
+	color: #ffffff;
+	cursor: pointer;
+	outline: none;
 }
 
 .signupFormWrapper input[type=submit]:hover {
-  background-color: #ffffff;
-  color: #80bcff;
-  transition: all 0.3s ease;
+	background-color: #ffffff;
+	color: #80bcff;
+	transition: all 0.3s ease;
 }
 
 @media (max-width: 700px) {
 	.signupFormWrapper input[type=submit] {
-	  width: 145px;
-	  height: 40px;
-	  line-height: 38px;
-	  font-size: 18px;
-	}	
+		width: 145px;
+		height: 40px;
+		font-size: 18px;
+		line-height: 38px;
+	}
 }
 
 @media (min-width: 700px) {
 	.signupFormWrapper input[type=submit] {
-	  width: 180px;
-	  height: 50px;
-	  line-height: 48px;
-	  font-weight: bold;
-	  font-size: 22px;
+		width: 180px;
+		height: 50px;
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 48px;
 	}
 }
 
 .cancelButton {
-  background-color: #fc9ca5;
-  border-radius: 30px;
-  text-align: center;
-  color: #fff;
-  border: 2px solid #fc9ca5;
-  margin-left: auto;
+	margin-left: auto;
+	border: 2px solid #fc9ca5;
+	border-radius: 30px;
+	background-color: #fc9ca5;
+	color: #fff;
+	text-align: center;
 }
 
 .cancelButton:hover {
-  background-color: #fff;
-  color: #fc9ca5;
-  transition: all 0.3s ease;
+	background-color: #fff;
+	color: #fc9ca5;
+	transition: all 0.3s ease;
 }
 
 @media (max-width: 700px) {
 	.cancelButton {
-	  width: 100px;
-	  height: 40px;
-	  line-height: 38px;
-	  font-size: 18px;
-	  margin-top: 10px;
-	}	
+		width: 100px;
+		height: 40px;
+		margin-top: 10px;
+		font-size: 18px;
+		line-height: 38px;
+	}
 }
 
 @media (min-width: 700px) {
 	.cancelButton {
-	  width: 120px;
-	  height: 50px;
-	  line-height: 50px;
-	  font-weight: bold;
-	  font-size: 22px;
-	  margin-top: 10px;
+		width: 120px;
+		height: 50px;
+		margin-top: 10px;
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 50px;
 	}
 }
 
 
 /* add ================================ */
 .addFormWrapper {
-  background-color: #fff;
-  border: 1px solid #f0f4f9;
-  border-radius: 2px;
-  padding: 20px;
+	padding: 20px;
+	border: 1px solid #f0f4f9;
+	border-radius: 2px;
+	background-color: #fff;
 }
 
 .addFormWrapper .formLabel {
-  color: #8491a5;
+	color: #8491a5;
 }
 
 @media (max-width: 700px) {
 	.addFormWrapper .formLabel {
-	  font-size: 16px;
-	}	
+		font-size: 16px;
+	}
 }
 
 @media (min-width: 700px) {
 	.addFormWrapper .formLabel {
-	  font-size: 24px;
+		font-size: 24px;
 	}
 }
 
 .addFormWrapper .inputForm {
-  margin: 0;
+	margin: 0;
 }
 
 .addFormWrapper input[type=text] {
-  width: 100%;
-  margin-top: 8px;
-  padding: 12px 16px;
-  background-color: #fcfcfd;
-  border: 1px solid #bac6d3;
-  border-radius: 2px;
-  color: #2b546a;
+	width: 100%;
+	margin-top: 8px;
+	padding: 12px 16px;
+	border: 1px solid #bac6d3;
+	border-radius: 2px;
+	background-color: #fcfcfd;
+	color: #2b546a;
 }
 
 .addFormWrapper input[type=text]::placeholder {
-  opacity: 50%;
+	opacity: 50%;
 }
 
 @media (max-width: 700px) {
 	.addFormWrapper input[type=text] {
-	  font-size: 18px;
-	  height: 40px;
-	}	
+		height: 40px;
+		font-size: 18px;
+	}
 }
 
 @media (min-width: 700px) {
 	.addFormWrapper input[type=text] {
-	  font-size: 22px;
-	  height: 60px;
+		height: 60px;
+		font-size: 22px;
 	}
 }
 
 .addFormWrapper input[type=submit] {
-  display: block;
-  margin-top: 10px;
-  margin-left: auto;
-  border-radius: 30px;
-  background-color: #80bcff;
-  color: #ffffff;
-  cursor: pointer;
-  outline: none;
-  border: 2px solid #80bcff;
+	display: block;
+	margin-top: 10px;
+	margin-left: auto;
+	border: 2px solid #80bcff;
+	border-radius: 30px;
+	background-color: #80bcff;
+	color: #ffffff;
+	outline: none;
+	cursor: pointer;
 }
 
 .addFormWrapper input[type=submit]:hover {
-  background-color: #ffffff;
-  color: #80bcff;
-  transition: all 0.3s ease;
+	background-color: #ffffff;
+	color: #80bcff;
+	transition: all 0.3s ease;
 }
 
 @media (max-width: 700px) {
 	.addFormWrapper input[type=submit] {
-	  width: 100px;
-	  height: 40px;
-	  line-height: 38px;
-	  font-size: 18px;
-	}	
+		width: 100px;
+		height: 40px;
+		font-size: 18px;
+		line-height: 38px;
+	}
 }
 
 @media (min-width: 700px) {
 	.addFormWrapper input[type=submit] {
-	  width: 120px;
-	  height: 50px;
-	  line-height: 48px;
-	  font-weight: bold;
-	  font-size: 22px;
+		width: 120px;
+		height: 50px;
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 48px;
 	}
 }
 
 .cancelButton {
-  background-color: #fc9ca5;
-  border-radius: 30px;
-  text-align: center;
-  color: #fff;
-  border: 2px solid #fc9ca5;
-  margin-left: auto;
+	margin-left: auto;
+	border: 2px solid #fc9ca5;
+	border-radius: 30px;
+	background-color: #fc9ca5;
+	color: #fff;
+	text-align: center;
 }
 
 .cancelButton:hover {
-  background-color: #fff;
-  color: #fc9ca5;
-  transition: all 0.3s ease;
+	background-color: #fff;
+	color: #fc9ca5;
+	transition: all 0.3s ease;
 }
 
 @media (max-width: 700px) {
 	.cancelButton {
-	  width: 100px;
-	  height: 40px;
-	  line-height: 38px;
-	  font-size: 18px;
-	  margin-top: 10px;
-	}	
+		width: 100px;
+		height: 40px;
+		margin-top: 10px;
+		font-size: 18px;
+		line-height: 38px;
+	}
 }
 
 @media (min-width: 700px) {
 	.cancelButton {
-	  width: 120px;
-	  height: 50px;
-	  line-height: 50px;
-	  font-weight: bold;
-	  font-size: 22px;
-	  margin-top: 10px;
+		width: 120px;
+		height: 50px;
+		margin-top: 10px;
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 50px;
 	}
 }
 
 /*edit ================================ */
 .editFormWrapper {
-  background-color: #fff;
-  border: 1px solid #f0f4f9;
-  border-radius: 2px;
-  padding: 20px;
+	padding: 20px;
+	border: 1px solid #f0f4f9;
+	border-radius: 2px;
+	background-color: #fff;
 }
 
 .editFormWrapper .editLabelEn {
-  color: #8491a5;
+	color: #8491a5;
 }
 
 @media (max-width: 700px) {
 	.editFormWrapper .editLabelEn {
-	  font-size: 16px;
-	}	
+		font-size: 16px;
+	}
 }
 
 @media (min-width: 700px) {
 	.editFormWrapper .editLabelEn {
-	  font-size: 24px;
+		font-size: 24px;
 	}
 }
 
 .editFormWrapper .editLabelJa {
-  color: #8491a5;
-  margin-top: 8px;
+	margin-top: 8px;
+	color: #8491a5;
 }
 
 @media (max-width: 700px) {
 	.editFormWrapper .editLabelJa {
-	  font-size: 16px;
-	}	
+		font-size: 16px;
+	}
 }
 
 @media (min-width: 700px) {
 	.editFormWrapper .editLabelJa {
-	  font-size: 24px;
+		font-size: 24px;
 	}
 }
 
 .editFormWrapper input[type=text] {
-  width: 100%;
-  padding: 12px 16px;
-  background-color: #fcfcfd;
-  border: 1px solid #bac6d3;
-  border-radius: 2px;
-  color: #2b546a;
+	width: 100%;
+	padding: 12px 16px;
+	border: 1px solid #bac6d3;
+	border-radius: 2px;
+	background-color: #fcfcfd;
+	color: #2b546a;
 }
 
 @media (max-width: 700px) {
 	.editFormWrapper input[type=text] {
-	  font-size: 18px;
-	  height: 40px;
-	}	
+		height: 40px;
+		font-size: 18px;
+	}
 }
 
 @media (min-width: 700px) {
 	.editFormWrapper input[type=text] {
-	  font-size: 22px;
-	  height: 60px;
+		height: 60px;
+		font-size: 22px;
 	}
 }
 
 .editFormWrapper input[type=submit] {
-  display: block;
-  margin-top: 10px;
-  margin-left: auto;
-  border-radius: 30px;
-  background-color: #80bcff;
-  color: #ffffff;
-  cursor: pointer;
-  outline: none;
-  border: 2px solid #80bcff;
+	display: block;
+	margin-top: 10px;
+	margin-left: auto;
+	border: 2px solid #80bcff;
+	border-radius: 30px;
+	outline: none;
+	background-color: #80bcff;
+	color: #ffffff;
+	cursor: pointer;
 }
 
 .editFormWrapper input[type=submit]:hover {
-  background-color: #ffffff;
-  color: #80bcff;
-  transition: all 0.3s ease;
+	background-color: #ffffff;
+	color: #80bcff;
+	transition: all 0.3s ease;
 }
 
 @media (max-width: 700px) {
 	.editFormWrapper input[type=submit] {
-	  width: 100px;
-	  height: 40px;
-	  line-height: 38px;
-	  font-size: 18px;
-	}	
+		width: 100px;
+		height: 40px;
+		font-size: 18px;
+		line-height: 38px;
+	}
 }
 
 @media (min-width: 700px) {
 	.editFormWrapper input[type=submit] {
-	  width: 120px;
-	  height: 50px;
-	  line-height: 48px;
-	  font-weight: bold;
-	  font-size: 22px;
+		width: 120px;
+		height: 50px;
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 48px;
 	}
 }
 
 /*alert ================================ */
 .alertDanger {
-  font-size: 18px;
-  background-color: #fc9ca5;
-  border-radius: 10px;
-  width: 150px;
-  height: 40px;
-  line-height: 30px;
-  text-align: center;
-  color:	 #fff;
-  border: 2px solid #fc9ca5;
+	display: inline-block;
+	width: 100%;
+	border: 1px solid crimson;
+	border-radius: 4px;
+	background-color: #FFC0CB;
+	color: crimson;
+	text-align: center;
+}
+
+@media (max-width: 700px) {
+	.alertDanger {
+		height: 50px;
+		margin-bottom: 10px;
+		font-size: 18px;
+		line-height: 50px;
+	}
+}
+
+@media (min-width: 700px) {
+	.alertDanger {
+		height: 60px;
+		margin-bottom: 20px;
+		font-size: 22px;
+		line-height: 60px;
+	}
 }
 
 .alertPrimary {
-  font-size: 18px;
-  background-color: #80bcff;
-  border-radius: 10px;
-  width: 120px;
-  height: 40px;
-  line-height: 30px;
-  text-align: center;
-  color: #fff;
-  border: 2px solid #80bcff;
+	display: inline-block;
+	width: 100%;
+	border: 1px solid royalblue;
+	border-radius: 4px;
+	background-color: #D9E5FF;
+	color: royalblue;
+	text-align: center;
 }
 
+@media (max-width: 700px) {
+	.alertPrimary {
+		height: 50px;
+		margin-bottom: 10px;
+		font-size: 18px;
+		line-height: 50px;
+	}
+}
+
+@media (min-width: 700px) {
+	.alertPrimary {
+		height: 60px;
+		margin-bottom: 20px;
+		font-size: 22px;
+		line-height: 60px;
+	}
+}
 
 /*# sourceMappingURL=style.css.map */
