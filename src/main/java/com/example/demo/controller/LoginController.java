@@ -61,7 +61,7 @@ public class LoginController {
 		if(isCorrectUserAuth) {
 			return "redirect:/";
 		} else {
-			String errorMsg = AppUtil.getMessage(messagesource, MessageConst.SIGNUP_EXISTED_LOGIN_ID);
+			String errorMsg = AppUtil.getMessage(messagesource, MessageConst.LOGIN_WRONG_INPUT);
 			model.addAttribute("errorMsg", errorMsg);
 			return "login";
 		}

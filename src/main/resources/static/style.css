@@ -501,6 +501,7 @@ td {
 	display: block;
 	margin-top: 10px;
 	margin-left: auto;
+	margin-bottom: 30px;
 	border: 2px solid #80bcff;
 	border-radius: 30px;
 	background-color: #80bcff;
@@ -570,6 +571,17 @@ td {
 	}
 }
 
+.signupFormWrapper .loginLink {
+	color: #191970;
+	font-size: 18px;
+	text-align: right;
+	text-decoration: underline;
+}
+
+.signupFormWrapper .loginLink:hover {
+	color: #80bcff;
+	transition: all 0.3s ease;
+}
 
 /* add ================================ */
 .addFormWrapper {
@@ -807,7 +819,7 @@ td {
 	width: 100%;
 	border: 1px solid crimson;
 	border-radius: 4px;
-	background-color: #FFC0CB;
+	background-color: rgb(255, 217, 223);
 	color: crimson;
 	text-align: center;
 }
@@ -835,7 +847,7 @@ td {
 	width: 100%;
 	border: 1px solid royalblue;
 	border-radius: 4px;
-	background-color: #D9E5FF;
+	background-color: rgb(223, 234, 255);
 	color: royalblue;
 	text-align: center;
 }
