@@ -465,6 +465,22 @@ td {
 	}
 }
 
+.signupFormWrapper .warnLabel {
+	color: #8491a5;
+}
+
+@media (max-width: 700px) {
+	.signupFormWrapper .warnLabel {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 700px) {
+	.signupFormWrapper .warnLabel {
+		font-size: 18px;
+	}
+}
+
 .signupFormWrapper .inputForm {
 	margin: 0;
 }
@@ -867,6 +883,22 @@ td {
 		margin-bottom: 20px;
 		font-size: 22px;
 		line-height: 60px;
+	}
+}
+
+.warnText {
+	color: crimson;
+}
+
+@media (max-width: 700px) {
+	.warnText {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 700px) {
+	.warnText {
+		font-size: 18px;
 	}
 }
 
