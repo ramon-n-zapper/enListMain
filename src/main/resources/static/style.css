@@ -429,16 +429,20 @@ td {
 	}
 }
 
-.loginFormWrapper .signupLink {
+.sulWrapper {
+	text-align: right;
+}
+
+.signupLink {
+	display: inline-block;
 	color: #191970;
 	font-size: 18px;
-	text-align: right;
 	text-decoration: underline;
 }
 
-.loginFormWrapper .signupLink:hover {
+.signupLink:hover {
 	color: #80bcff;
-	transition: all 0.3s ease;
+	transition: all 0.3s ease;	
 }
 
 /* signup ================================ */
@@ -587,7 +591,12 @@ td {
 	}
 }
 
+.lLWrapper {
+	text-align: right;
+}
+
 .signupFormWrapper .loginLink {
+	display: inline;
 	color: #191970;
 	font-size: 18px;
 	text-align: right;

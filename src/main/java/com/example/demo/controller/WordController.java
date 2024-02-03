@@ -11,6 +11,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.entity.WordEntity;
 import com.example.demo.repository.WordRepository;
 
+
+/**
+ * 本画面 Controller
+ * 
+ * @auther ramon
+ *
+ */
 @Controller
 public class WordController {
 
@@ -22,7 +29,7 @@ public class WordController {
 	}
 	
 	//DB内の情報を全件検索、index.htmlにて表示
-	@GetMapping("/")
+	@GetMapping("/index")
 	public String displayWords(Model model) {
 		//ここでDB内の情報をfindAllにて全件検索、そしてwordsクラスに格納、
 		List<WordEntity> words = wordRepository.findAll();
@@ -44,7 +51,7 @@ public class WordController {
 	    wordRepository.save(word);
 
 	    // リダイレクト
-	    return "redirect:/";
+	    return "redirect:/index";
 	}
 	
 	//編集ページの表示と、idに紐づけられている編集対象の単語表示
@@ -69,7 +76,7 @@ public class WordController {
 	    wordRepository.save(word);
 
 	    // リダイレクト
-	    return "redirect:/";
+	    return "redirect:/index";
 	}
 
 	//単語削除
@@ -80,6 +87,6 @@ public class WordController {
 		
 		wordRepository.delete(word);
 		
-		return "redirect:/";
+		return "redirect:/index";
 	}
 }
