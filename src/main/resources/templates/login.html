@@ -17,7 +17,8 @@
 			<h1>ログイン画面</h1>
 		</div>
 		<div class="loginFormWrapper">
-			<span class="alertDanger" th:text="${errorMsg}"></span>
+			<span th:classappend="${#strings.isEmpty(errorMsg) ? ' ' : 'alertDanger'}" th:text="${errorMsg}"
+				th:if="${errorMsg != null}"></span>
 			<p class="formLabel">ログインIDとパスワードを入力してください</p>
 			<form th:action="@{/login}" method="post" th:object="${loginForm}">
 				<div class="formGroupLog">
