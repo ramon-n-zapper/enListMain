@@ -11,13 +11,16 @@
 <body>
 	<header>
 		<a href="/index" class="headerLogo">ENGLISH VOCABULARY LIST</a>
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" class="logoutButton" value="ログアウト">
+		</form>
 	</header>
 	<div class="container">
 		<div class="containerHeader">
 			<h1>英単語リスト</h1>
 			<a th:href="@{/add}" class="addButton">+新規単語登録</a>
 		</div>
-		
+
 		<div class="indexTableWrapper">
 			<div class="hideButton">
 				<button class="hideButtonEn" id="toggleEnglishBtn" onclick="toggleColumn('english')">

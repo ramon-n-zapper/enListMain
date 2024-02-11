@@ -56,35 +56,83 @@ input {
 
 /* header ================================ */
 header {
-	overflow: hidden;
-	height: 56px;
+	display: flex;
+	justify-content: space-between;
 	border-bottom: 1px solid #f0f4f9;
 	background-color: #fff;
 }
 
-header .headerLogo {
-	display: inline;
-	margin-left: 12px;
-	color: #6c7686;
-	font-weight: 600;
-	line-height: 56px;
-}
-
-@media (max-width: 700px) {
-	header .headerLogo {
-		font-size: 23px;
+@media (max-width: 600px) {
+	header {
+		height: 40px;
 	}
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
+	header {
+		height: 56px;
+	}
+}
+
+header .headerLogo {
+	display: inline;
+	color: #6c7686;
+	font-weight: 600;
+}
+
+@media (max-width: 600px) {
 	header .headerLogo {
+		margin-left: 7px;
+		font-size: 14px;
+		line-height: 40px;
+	}
+}
+
+@media (min-width: 600px) {
+	header .headerLogo {
+		margin-left: 12px;
 		font-size: 25px;
+		line-height: 56px;
 	}
 }
 
 
 header .headerLogo:hover {
 	color: #58d2b2;
+}
+
+.logoutButton {
+	display: flex;
+	border: 2px solid #b7cadc;
+	background-color: #b7cadc;
+	color: #6c7686;
+	justify-content: center;
+	font-weight: bold;
+	line-height: 100%;
+}
+
+.logoutButton:hover {
+	background-color: #fff;
+	color: #b7cadc;
+	transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+	.logoutButton {
+		width: 90px;
+		height: 40px;
+		margin-right: 7px;
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 600px) {
+	.logoutButton {
+		width: 140px;
+		height: 56px;
+		margin-right: 15px;
+		font-size: 20px;
+	}
 }
 
 /* container ================================ */
@@ -114,17 +162,17 @@ header .headerLogo:hover {
 }
 
 .container .containerHeader .addButton {
-	border: 2px solid #b7cadc;
+	border: 2px solid #58d2b2;
 	border-radius: 3px;
-	background-color: #b7cadc;
-	color: #6c7686;
+	background-color: #58d2b2;
+	color: #fff;
 	text-align: center;
 	font-weight: bold;
 }
 
 .container .containerHeader .addButton:hover {
 	background-color: #fff;
-	color: #b7cadc;
+	color: #58d2b2;
 	transition: all 0.3s ease;
 }
 
@@ -442,7 +490,7 @@ td {
 
 .signupLink:hover {
 	color: #80bcff;
-	transition: all 0.3s ease;	
+	transition: all 0.3s ease;
 }
 
 /* signup ================================ */
