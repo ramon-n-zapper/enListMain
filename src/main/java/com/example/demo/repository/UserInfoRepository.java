@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.demo.entity.UserInfo;
 
 /**
- * ユーザー情報テーブル DAO
+ * ユーザー情報テーブルRepositoryクラス
  * 
  * @auther ramon
  *

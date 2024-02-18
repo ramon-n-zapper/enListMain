@@ -18,7 +18,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
 /**
- * ログイン画面 Controller
+ * ログイン画面Controllerクラス
  * 
  * @auther ramon
  *
@@ -40,7 +40,7 @@ public class LoginController {
 	private final HttpSession session;
 	
 	/**
-	 * 初期表示
+	 * 画面の初期表示を行います。
 	 * 
 	 * @param model モデル
 	 * @param form 入力情報
@@ -52,6 +52,13 @@ public class LoginController {
 		return "login";
 	}
 	
+	/**
+	 * ログインエラー時にセッションからエラーメッセージを取得して、画面の表示を行います。
+	 * 
+	 * @param model モデル
+	 * @param form 入力情報
+	 * @return ログイン画面
+	 */
 	@GetMapping(value = UrlConst.LOGIN, params = "error")
 	public String viewWithError(Model model, LoginForm form) {
 		var errorInfo = (Exception) session.getAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
@@ -60,7 +67,7 @@ public class LoginController {
 	}
 	
 	/**
-	 * ログイン：formに入力されたパスワードとDAO(repository)から取ってきたパスワードを比較、出力
+	 * ログイン：formに入力されたパスワードとDAO(repository)から取ってきたパスワードを比較、出力します
 	 * 
 	 * @param model モデル
 	 * @param form 入力情報

@@ -1,7 +1,7 @@
 package com.example.demo.constant;
 
 /**
- * URL 定数クラス
+ * リクエスト URL 定数クラス
  * 
  * @auther ramon
  *

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.constant.EnumSignupMessage;
 import com.example.demo.constant.MessageConst;
+import com.example.demo.constant.UrlConst;
 import com.example.demo.entity.UserInfo;
 import com.example.demo.form.SignupForm;
 import com.example.demo.service.SignupService;
@@ -20,7 +21,7 @@ import com.example.demo.util.AppUtil;
 import lombok.RequiredArgsConstructor;
 
 /**
- * ユーザー登録画面 Controller
+ * ユーザー登録画面Controllerクラス
  * 
  * @auther ramon
  *
@@ -36,26 +37,28 @@ public class SignupController {
 	private final MessageSource messageSource;
 
 	/**
-	 * 初期表示
+	 * 画面の初期表示を行います。
 	 * 
-	 * @param model モデルc
+	 * @param model モデル
 	 * @param form 入力情報
 	 * @return 表示画面
 	 */
-	@GetMapping("/signup")
+	@GetMapping(UrlConst.SIGNUP)
 	public String view(Model model, SignupForm form) {
 		return "signup";
 	}
 
 	/**
-	 * ユーザー登録
+	 * 画面の入力情報からユーザー登録処理を呼び出します。
+	 * 
+	 * <p>ただし、入力チェックでエラーになった場合や登録済みのログインIDを使っていた場合は<br>
+	 * エラーメッセージを画面に表示します。
 	 * 
 	 * @param model モデル
 	 * @param form 入力情報
-	 * @param bdResult 入力チェック結果
-	 * @return 表示画面
+	 * @param bdResult 入力内容の単項目チェック結果
 	 */
-	@PostMapping("/signup")
+	@PostMapping(UrlConst.SIGNUP)
 	public void signup(Model model, @Validated SignupForm form, BindingResult bdResult) {
 		if (bdResult.hasErrors()) {
 			editGuideMessage(model, MessageConst.FORM_ERROR, true);
@@ -68,10 +71,13 @@ public class SignupController {
 	}
 
 	/**
-	 * 画面に表示するガイドメッセージを設定する
+	 * メッセージIDを使ってプロパティファイルからメッセージを取得し、画面に表示します。
+	 * 
+	 * <p>また、画面でメッセージを表示する際に通常メッセージとエラーメッセージとで色分けをするため、<br>
+	 * その判定に必要な情報も画面に渡します。
 	 * 
 	 * @param model モデル
-	 * @param messageId メッセージID
+	 * @param messageId プロパティファイルから取得したいメッセージのID
 	 * @param isError エラー有無
 	 */
 	private void editGuideMessage(Model model, String messageId, boolean isError) {
@@ -81,10 +87,10 @@ public class SignupController {
 	}
 	
 	/**
-	 * ユーザー情報登録の結果に合ったメッセージキーを判断する
+	 * ユーザ情報登録の結果メッセージキーを判断します。
 	 * 
-	 * @param userInfoOpt ユーザー登録結果(登録済みだった場合はEmpty)
-	 * @return メッセージキー
+	 * @param userInfoOpt ユーザ登録結果(入力されたログインIDのユーザーが登録済みだった場合はEmpty)
+	 * @return プロパティファイルから取得するメッセージの情報
 	 */
 	private EnumSignupMessage judgeMessageKey(Optional<UserInfo> userInfoOpt) {
 		if (userInfoOpt.isEmpty()) {
